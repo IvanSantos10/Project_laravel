@@ -7,21 +7,28 @@ Route::group(['middleware' => ['web'], 'namespace'=>'App\Http\Controllers'], fun
      Route::auth();
 });
 
-//App::setLocale('pt-BR');
+///App::setLocale('pt-BR');
+
 Route::get('language','LangController@language');
 Route::auth();
 
 Route::get('/', 'CatalogacaoController@list');
 Route::get('/home', 'CatalogacaoController@list');
-Route::get('/cadastro', 'CatalogacaoController@index');
 
 
 /*
  *  Route::get('/', function () {
 	return view('welcome');
-});
+});*/
+
+
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-    Route::get('/home', 'HomeController@index');
+
+    Route::resource('catalogacao', 'CatalogacaoController');
+
+    /*
+    Route::post('/cadastro', 'CatalogacaoController@store');
+    Route::get('/edit{id}', 'CatalogacaoController@edit');
+    */
 });
-*/

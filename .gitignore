@@ -1,5 +1,10 @@
+.idea
 /vendor
 /node_modules
+/public/css
+/public/font-awesome
+/public/fonts
+/public/js
 /public/storage
 Homestead.yaml
 Homestead.json

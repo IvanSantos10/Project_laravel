@@ -5,9 +5,9 @@
     <div class="row"> <br><br><br>
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Adicionar Item</div>
+                <div class="panel-heading">Editar Item</div>
                 <div class="panel-body">
-                    {!! Form::open(array('url' => 'catalogacao#services')) !!}
+                    {!! Form::model($catalogacao, array('route' => ['catalogacao.update', $catalogacao->id], 'method' => 'put')) !!}
 
                         @include('includes._form_cadastro')
 

@@ -15,7 +15,7 @@
                             website to become a member.</p>
                     </div>
                     <div class="col-lg-5 {{ $k % 2 ? 'col-lg-offset-2' : 'col-sm-pull-6'}} col-sm-6">
-                        <img class="img-responsive" src="img/banner-bg.jpg" alt="">
+                        <img class="img-responsive" src="{{ asset('img/banner-bg.jpg') }}" alt="">
                     </div>
                 </div>
 

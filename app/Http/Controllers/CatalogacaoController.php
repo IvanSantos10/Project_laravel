@@ -30,6 +30,8 @@ class CatalogacaoController extends Controller
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->middleware('auth', ['except'=>'list']);
+
     }
 
 
@@ -67,6 +69,7 @@ class CatalogacaoController extends Controller
      */
     public function store(CatalogacaoCreateRequest $request)
     {
+        $request['user_id'] = Auth()->user()->id;
 
         try {
 
@@ -84,7 +87,7 @@ class CatalogacaoController extends Controller
                 return response()->json($response);
             }
 
-            return redirect()->back()->with('message', $response['message']);
+            return $this->list();//redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
@@ -116,7 +119,7 @@ class CatalogacaoController extends Controller
             ]);
         }
 
-        return view('catalogacaos.show', compact('catalogacao'));
+        return view('catalogacao.show', compact('catalogacao'));
     }
 
 
@@ -132,7 +135,7 @@ class CatalogacaoController extends Controller
 
         $catalogacao = $this->repository->find($id);
 
-        return view('catalogacaos.edit', compact('catalogacao'));
+        return view('pages.edit', compact('catalogacao'));
     }
 
 
@@ -151,7 +154,7 @@ class CatalogacaoController extends Controller
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
-            $catalogacao = $this->repository->update($id, $request->all());
+            $catalogacao = $this->repository->update($request->all(), $id);
 
             $response = [
                 'message' => 'Catalogacao updated.',

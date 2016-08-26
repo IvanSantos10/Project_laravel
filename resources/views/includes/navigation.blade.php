@@ -19,8 +19,9 @@
                 <a href="{{ url('/#services') }}" >Services</a>
             </li>
             <li >
-                <a href="#contact" >Contato</a>
+                <a href="{{ url('/#contact') }}" >Contato</a>
             </li>
+            <!----
             <li>
                 <div class="dropdown">
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -36,13 +37,14 @@
                     </ul>
                 </div>
             </li>
+            --->
             <!-- Authentication Links -->
             @if (Auth::guest())
                 <li><a href="{{ url('/login#services') }}">Login</a></li>
                 <li><a href="{{ url('/register#services') }}">Registar</a></li>
             @else
                 <li >
-                    <a href="{{ url('/cadastro#services') }}" >Cadastro</a>
+                    <a href="{{ url('/catalogacao#services') }}" >Cadastro</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

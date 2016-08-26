@@ -13,7 +13,7 @@ class CatalogacaoUpdateRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**

@@ -20,7 +20,6 @@ class Catalogacao extends Model implements Transformable
         'parte_coletata',
         'n_tombamento',
         'caract_botanica',
-        'caract_botanica',
         'Infor_etnofarmacologica',
         'Infor_etnobotanicas',
         'user_id'
