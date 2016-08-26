@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand topnav" href="#">Projeto</a>
+        <a class="navbar-brand topnav" href="#">Plantas Medicinais</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,6 +20,21 @@
             </li>
             <li >
                 <a href="#contact" >Contato</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Languages
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        @foreach(config('app.languages') as $lang)
+                            <li class="{{ session('locale') == $lang ? 'active' : '' }}">
+                                <a href="/language?lang={{ $lang }}" >{{ $lang }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
             </li>
             <!-- Authentication Links -->
             @if (Auth::guest())

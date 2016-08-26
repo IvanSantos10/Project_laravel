@@ -3,20 +3,16 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="intro-message">
-                <h1>Landing Page</h1>
+                <h1>Plantas Medicinais</h1>
                 <h3>ESTUDO ETNOFARMACOLÓGICO DE ESPÉCIES VEGETAIS </h3>
                 <hr class="intro-divider">
-                <ul class="list-inline intro-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                    </li>
-                </ul>
+
+                <div class="input-group col-md-4 col-md-offset-4">
+                    <input type="text" class="form-control" placeholder="Procurar por...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

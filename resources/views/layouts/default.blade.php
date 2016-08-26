@@ -32,6 +32,7 @@
 <div class="banner">
     @include('includes.banner')
 </div>
+
 <!-- /.banner -->
 
 <!-- Footer -->

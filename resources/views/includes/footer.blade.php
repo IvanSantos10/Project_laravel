@@ -18,7 +18,7 @@
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
-            <p class="copyright text-muted small">Copyright &copy; Your Company {{ date("Y") }}. Todos os Direitos Reservados</p>
+            <p class="copyright text-muted small">Copyright &copy; Plantas Medicinais {{ date("Y") }}. Todos os Direitos Reservados</p>
         </div>
     </div>
 </div>
