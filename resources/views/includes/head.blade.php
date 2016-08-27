@@ -4,7 +4,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Landing Page - Start Bootstrap Theme</title>
+<title>Plantas Medicinais</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="{{ asset('css/bootstrap.min.css')}} " rel="stylesheet" type="text/css">

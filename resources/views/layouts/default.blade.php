@@ -4,6 +4,14 @@
 
 <head>
     @include('includes.head')
+
+    <style type="text/css">
+        .ajax-load{
+            background: #e1e1e1;
+            padding: 10px 0px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,6 +53,8 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/js.js')}}"></script>
+
 
 </body>
 

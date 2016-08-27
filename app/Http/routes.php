@@ -14,6 +14,7 @@ Route::auth();
 
 Route::get('/', 'CatalogacaoController@list');
 Route::get('/home', 'CatalogacaoController@list');
+Route::get('/search', 'SearchController@index');
 
 
 /*
